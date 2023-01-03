@@ -1,0 +1,155 @@
+<html>
+
+<head>
+    <title>Lab 2</title>
+</head>
+
+<body>
+    <h1>List Implementation</h1>
+    <p>Example of unordered list:<br>
+    <ul type="square">
+        <li>Python</li>
+        <li>Java</li>
+        <li>C++</li>
+    </ul>
+    </p>
+    <p>Example of ordered list:<br>
+    <ol type="i">
+        <li>Python</li>
+        <li>Java</li>
+        <li>C++</li>
+    </ol>
+    </p>
+    <h1>Table Implementation</h1>
+    <table border="border">
+        <caption>Table 1</caption>
+        <tr>
+            <th>Name</th>
+            <th>Class</th>
+            <th>Phone</th>
+        </tr>
+        <tr>
+            <td>ABC</td>
+            <td>B1</td>
+            <td>1234657980</td>
+        </tr>
+        <tr>
+            <td>XYZ</td>
+            <td>B3</td>
+            <td>9876543210</td>
+        </tr>
+    </table>
+    <br>
+    <table border="border">
+        <caption>Table 2</caption>
+        <tr>
+            <th>Name</th>
+            <th>Class</th>
+            <th colspan="2" align="right">Phone</th>
+        </tr>
+        <tr>
+            <td>ABC</td>
+            <td>B1</td>
+            <td>1234657980</td>
+            <td>1234667895</td>
+        </tr>
+        <tr>
+            <td>XYZ</td>
+            <td>B3</td>
+            <td>9876543210</td>
+            <td>1234567890</td>
+        </tr>
+    </table>
+    <br>
+    <table border="border">
+        <caption>Table 3</caption>
+        <tr>
+            <th>Name</th>
+            <td>ABC</td>
+        </tr>
+        <tr>
+            <th rowspan="2" valign="top">Phone</th>
+            <td>1234657980</td>
+
+        </tr>
+        <tr>
+            <td>1234667895</td>
+        </tr>
+    </table>
+    <h1>Form Implementation</h1>
+    <h3>Text Field:</h3>
+    <form>
+        <label for="fname">First Name:</label><br>
+        <input id="fname_in" type="text"><br>
+        <p id="fname_error"></p>
+        <label for="lname">Last Name:</label><br>
+        <input id="lname_in" type="text"><br>
+        <p id="lname_error"></p>
+        <button type="submit" id="sub">Submit</button>
+        <p id="output"></p>
+    </form>
+    <br>
+    <h3>Radio Field:</h3>
+    <p>Language used:</p>
+    <form>
+        <input id="html" type="radio" value="html" name="language">
+        <label for="html">HTML</label><br>
+        <input id="css" type="radio" value="css" name="language">
+        <label for="css">CSS</label><br>
+        <input id="js" type="radio" value="js" name="language">
+        <label for="js">JS</label><br>
+        <button id="submit_radio">Submit</button>
+        <p id="output_radio"></p>
+    </form>
+    <br>
+    <h3>CheckBox Field:</h3>
+    <p>Language used:</p>
+    <form>
+        <input id="html_check" type="checkbox" value="html" name="language_check">
+        <label for="html_check">HTML</label><br>
+        <input id="css_check" type="checkbox" value="css" name="language_check">
+        <label for="css_check">CSS</label><br>
+        <input id="js_check" type="checkbox" value="js" name="language_check">
+        <label for="js_check">JS</label><br>
+        <button id="submit_check">Submit</button>
+        <p id="output_check"></p>
+    </form>
+</body>
+<script>
+    document.getElementById("sub").addEventListener("click", function () {
+        const first = document.getElementById("fname_in").value;
+        const last = document.getElementById("lname_in").value;
+        document.getElementById("output").innerHTML = "<b>" + first + " " + last + "</b>";
+        event.preventDefault();
+    });
+    document.getElementById("submit_radio").addEventListener("click", function () {
+        var value = "nothing";
+        if (document.getElementById("html").checked) {
+            value = document.getElementById("html").value;
+        }
+        else if (document.getElementById("css").checked) {
+            value = document.getElementById("css").value;
+        }
+        else if (document.getElementById("js").checked) {
+            value = document.getElementById("js").value;
+        }
+        document.getElementById("output_radio").innerHTML = "You selected " + value;
+        event.preventDefault();
+    });
+    document.getElementById("submit_check").addEventListener("click", function () {
+        var value = "";
+        if (document.getElementById("html_check").checked) {
+            value += document.getElementById("html_check").value+",";
+        }
+        if (document.getElementById("css_check").checked) {
+            value += document.getElementById("css_check").value+",";
+        }
+        if (document.getElementById("js_check").checked) {
+            value += document.getElementById("js_check").value+",";
+        }
+        document.getElementById("output_check").innerHTML = "You selected :" + value;
+        event.preventDefault();
+    })
+</script>
+
+</html>

@@ -1,0 +1,22 @@
+form{
+    border-style: dashed;
+    border-color: brown;
+}
+label{
+    font-weight: bold;
+
+}
+label:hover{
+    color: red;
+}
+.subbutton{
+    text-align: center;
+}
+input:active{
+    color: black;
+}
+h1{
+    color: chocolate;
+    text-align: center;
+    margin: 0.6%;
+}

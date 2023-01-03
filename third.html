@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <title>Lab 3</title>
+    <link rel="stylesheet" href="third.css">
+    <style>
+        h3#textfield {
+            text-align: right;
+        }
+
+        h3 {
+            color: aqua;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center; color: blueviolet;">Form Implementation</h1>
+    <h3 id="textfield">Text Field:</h3>
+    <form>
+        <label for="fname">First Name:</label><br>
+        <input id="fname_in" type="text"><br>
+        <p id="fname_error"></p>
+        <label for="lname">Last Name:</label><br>
+        <input id="lname_in" type="text"><br>
+        <p id="lname_error"></p>
+        <div class="subbutton">
+            <button type="submit" id="sub">Submit</button>
+        </div>
+        <p id="output"></p>
+    </form>
+    <br>
+    <h3>Radio Field:</h3>
+    <p>Language used:</p>
+    <form>
+        <input id="html" type="radio" value="html" name="language">
+        <label for="html">HTML</label><br>
+        <input id="css" type="radio" value="css" name="language">
+        <label for="css">CSS</label><br>
+        <input id="js" type="radio" value="js" name="language">
+        <label for="js">JS</label><br>
+        <div class="subbutton">
+            <button id="submit_radio">Submit</button>
+        </div>
+        <p id="output_radio"></p>
+    </form>
+    <br>
+    <h3 style="text-align: left;">CheckBox Field:</h3>
+    <p>Language used:</p>
+    <form>
+        <input id="html_check" type="checkbox" value="html" name="language_check">
+        <label for="html_check">HTML</label><br>
+        <input id="css_check" type="checkbox" value="css" name="language_check">
+        <label for="css_check">CSS</label><br>
+        <input id="js_check" type="checkbox" value="js" name="language_check">
+        <label for="js_check">JS</label><br>
+        <div class="subbutton">
+            <button id="submit_check">Submit</button>
+        </div>
+        <p id="output_check"></p>
+    </form>
+
+</body>
+</html>
